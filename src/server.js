@@ -14,7 +14,7 @@ const AppError = require('./utils/AppError');
 
 // Rotas
 const authRoutes = require('./modules/auth/authRoutes');
-const cartRoutes = require('./modules/cart/cartRoutes');
+const carritoRoutes = require('./modules/carrito/carritoRoutes');
 const productRoutes = require('./modules/products/productRoutes');
 const orderRoutes = require('./modules/orders/orderRoutes');
 const paymentRoutes = require('./modules/payments/paymentRoutes');
@@ -47,7 +47,7 @@ app.get('/health', async (req, res) => {
 
 // APIs v1
 app.use('/api/v1/auth', authRoutes);
-app.use('/api/v1/cart', authMiddleware, cartRoutes);
+app.use('/api/v1/carrito', authMiddleware, carritoRoutes);
 app.use('/api/v1/products', productRoutes);
 app.use('/api/v1/categories', categoryRoutes);
 app.use('/api/v1/orders', orderRoutes);
